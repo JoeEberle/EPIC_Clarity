@@ -397,13 +397,13 @@ only column that CANNOT be NULL is a column in the primary key of a table.
 2. Conducting Clarity Research
 3. Data Dictionary
 4.     Search the Cogito Dictionary
-5.      Overview Section
+5.     Overview Section
 6.     Columns Section
-7.      Data Types
-8.      Category List Tables
+7.     Data Types
+8.     Category List Tables
 9.     Chronicles Info
-10.     Dependencies
-11.     Indexes
+10.    Dependencies
+11.    Indexes
 12. Beyond the Basics  Cogito Documentation
 13. Exercise 3 1  Hospital Admissions Query Research Clarity
 14. The ETL Process
@@ -436,7 +436,7 @@ and columns given a Chronicles sample data point.
 3. Join the Clarity tables together using the correct foreign key.
 
 In this section, you will learn how to complete Step 2. After finding the INI and item numbers that store
-the source data youd like to include in your query, the Data Dictionary, within the Analytics Catalog, can
+the source data you would like to include in your query, the Data Dictionary, within the Analytics Catalog, can
 find the Clarity tables and columns you need.
 
 
@@ -446,14 +446,70 @@ The Data Dictionary contains descriptions of Clarity and Caboodle tables and col
 characteristics of each database object, table level and column level data lineage, information to help
 identify joins, and more. Access it from the Analytics Catalog.
 
-To open the Analytics Catalog, search Analytics Catalog or click on the name of the current dashboard and
-click Show Catalog. To find Clarity and Caboodle tables in the Analytics Catalog, filter the catalog for a
+To open the **Analytics Catalog**, search **Analytics Catalog** or click on the name of the current dashboard and
+click Show Catalog. To find **Clarity** and **Caboodle** tables in the Analytics Catalog, filter the catalog for a
 specific database using
+
+1. **cl** to find only clarity tables, Search throughout the Data Dictionary for instances of that keyword
+in Clarity
+2. **cb** to find only caboodle tables,Search throughout the Data Dictionary for instances of that keyword 
+in caboodle 
+3. **data** to find only data tables, Search throughout the Data Dictionary for instances of that keyword 
+in **caboodle OR clarity** 
 
 The Cogito Dictionary supports searching by INI and item number and will return database objects in
 Clarity or Caboodle that reference that item. This also allows report writers to use the dependencies
 section of the Summary form to identify Caboodle database objects that depend on a specific Clarity
 table.
+
+
+
+
+## Data Dictionary Overview Section
+
+The **Overview section** will be the top section of the Summary form. 
+
+It will display
+1. Different chips that describe different attributes of the table
+2. Organization specific table notes if your ETL administrator added table notes
+3. Grouped tables
+
+Four attributes found in the chips that will be valuable for business intelligence developers are
+1. **Type of Database Object**  PATIENT is an extracted table which means it gets its data from Chronicles during the
+nightly ETL process. Other options would include derived table, view, and function. We will
+cover the different options more later in Non Extracted Tables and Documentation.
+
+2. **Load Frequency** PATIENT has a load frequency of INCREMENTAL in the training environment. The load
+frequency refers to how often data gets loaded into a specific Clarity table. Incremental is a
+common load frequency and means nightly.
+
+3. **Master file** Many extracted tables will have a chip that helps to inform report writers what master file
+the data is extracted from. For PATIENT, the master file is the EPT master file.
+
+4. **Grouped Tables** (if applicable) The grouped tables are extension tables created when an original table has enough
+columns to warrant splitting it into different tables. **Grouped tables** have the same **primary key** and should 
+have the same number of rows. The general naming structure would have the grouped tables include a suffix 
+of _2, _3 etc. The names of the grouped tables are links that will open the Summary tab of those tables in the
+dictionary.
+
+
+## Data dictionary Columns Section
+
+The columns section is directly below the **overview section**. The top header also has a tab labeled
+Column that will jump you down to the columns section. The columns section lists out some key
+information about the columns found in the database object including
+
+1. **Name** The **column name** as it is seen in Clarity
+2. **Data Type**  The SQL data type of the column
+4. **Category Lookup** If the column is a category column, the Category Lookup will provide you with the 
+category list table that you can use in Clarity to find the category names
+5. **Chronicles Info** The items in Chronicles where the column is extracted from
+6. **Description** A brief description of the column, if the description is too large to fit in that cell,
+there will be chevrons that you can click on to expand out that cell to display the full description.
+
+You are able to **sort the columns** by clicking on the **headers** for the Name, Data Type, Category Lookup, or
+Chronicles Info columns.
+
 
 
 

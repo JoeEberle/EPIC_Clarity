@@ -124,3 +124,17 @@
 
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
                                                                                                                         
+                                                                                                                        
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2025-01-22 15:37:52,442 - INFO - START EPIC_Clarity =============================================
+2025-01-22 15:37:52,442 - INFO - START EPIC_Clarity Start Time = 2025-01-22 15:37:52
+2025-01-22 15:37:52,442 - INFO - EPIC_Clarity Step 0 - Initialize the configuration file parser
+2025-01-22 15:37:52,443 - INFO - Process EPIC_Clarity Step 0 - Initializing and starting Logging Process.
+2025-01-22 15:37:53,356 - INFO - PERFORMANCE EPIC_Clarity The total process duration was:0.91
+2025-01-22 15:37:53,357 - INFO - PERFORMANCE EPIC_Clarity Stop Time = 2025-01-22 15:37:53
+2025-01-22 15:37:53,357 - INFO - PERFORMANCE EPIC_Clarity Short process duration less than 3 Seconds:0.91
+2025-01-22 15:37:53,357 - INFO - PERFORMANCE EPIC_Clarity Performance optimization is not reccomended
+2025-01-22 15:37:53,357 - INFO - END EPIC_Clarity =============================================
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+                                                                                                                        

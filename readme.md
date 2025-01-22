@@ -8,21 +8,6 @@
 ![Solution](code.png)
 
     
-## Table of Contents
-
-- [Solution Overview](#solution-overview)
-- [Who will use this ?](#who-can-use)
-- [Advantages of Using](#advantages-of-using)
-- [Return on Investment (ROI)](#return-on-investment-roi)
-- [How it Works](#how-it-works)
-- [Conclusion](#conclusion)
-- [Getting Started](#getting-started)
-- [Solution Features](#solution-features)
-- [Code Features](#code-features)
-- [Deliverables or Figures](#deliverables-or-figures)
-- [Contact Information](#contact-information)
-
-
 
 ## Introduction to CLR110 Clarity Data Model Fundamentals  Chapter 1
 
@@ -516,47 +501,4 @@ maximum length the column can hold.
     
 ![Solution](code.png)
 
-    
-## Getting Started
-
-The goal of this solution is to **Jump Start** your development and have you up and running in 30 minutes. 
-
-To get started with the **Epic Clarity** solution repository, follow these steps:
-1. Clone the repository to your local machine.
-2. Install the required dependencies listed at the top of the notebook.
-3. Explore the example code provided in the repository and experiment.
-4. Run the notebook and make it your own - **EASY !**
-    
-## Solution Features
-
-- Easy to understand and use  
-- Easily Configurable 
-- Quickly start your project with pre-built templates
-- Its Fast and Automated
-- Saves You Time 
-
-
-## Code Features
-
-These features are designed to provide everything you need for **Epic Clarity** 
-
-- **Self Documenting** - Automatically identifes major steps in notebook 
-- **Self Testing** - Unit Testing for each function
-- **Easily Configurable** - Easily modify with **config.INI** - keyname value pairs
-- **Includes Talking Code** - The code explains itself 
-- **Self Logging** - Enhanced python standard logging   
-- **Self Debugging** - Enhanced python standard debugging
-- **Low Code** - or - No Code  - Most solutions are under 50 lines of code
-- **Educational** - Includes educational dialogue and background material
-
-    
-## List of Figures
- ![additional_image](big_picture.png)  <br>![additional_image](category_lookup.png)  <br>![additional_image](category_lookup_II.png)  <br>![additional_image](CDR.png)  <br>![additional_image](contact_serial_number.png)  <br>![additional_image](CSN.png)  <br>![additional_image](data_lineage.png)  <br>![additional_image](EPIC_Clarity.png)  <br>![additional_image](excercise_3_1.png)  <br>![additional_image](item_characteristics.png)  <br>![additional_image](item_characteristics_II.png)  <br>![additional_image](item_information.png)  <br>![additional_image](item_information_window.png)  <br>![additional_image](lesson_2_review.png)  <br>![additional_image](query_request.png)  <br>![additional_image](the_big_picture.png)  <br>
-    
-
-## Github https://github.com/JoeEberle/ - Email  josepheberle@outlook.com 
-    
-![Developer](developer.png)
-
-![Brand](brand.png)
     

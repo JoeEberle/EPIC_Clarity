@@ -45,13 +45,37 @@ Before undertaking the course of study within this class, you must have complete
 4. Attend CDW110v Caboodle Data Model Fundamentals
 
 
+
+## How to Use This Training Companion
+
+This training companion is for use in conjunction with other course materials.
+
+Note that new training materials are released regularly throughout the year. If you downloaded this
+companion even a few weeks or months ago, there may be a new version that you should use instead. At
+the beginning of this companion, look at the version and dates listed. If you  complete a task after its
+listed date, be sure to check the All Training Companion Change Log to see if there are significant
+changes to the new materials.
+
+If there are, be sure to download the new materials when theyre released.
+Youll find informative text boxes and do now steps throughout the lessons to draw your attention to
+specific content. There are a few different types of text boxes you might encounter. Each has a different
+purpose as defined below
+
+
+## After Class Practice
+
+After class, you will likely want to practice in the system and complete additional in class or if you have time
+exercises. Please reference the following documents available on Galaxy for information on how to log in and use our 
+practice system.
+
+
 ## Data Lineage 
 
-The following diagram shows how data in Epic moves from Chronicles, to Clarity, to Caboodle.
+Data in Epic moves from Chronicles, to Clarity, to Caboodle.
 
 
 
-## Investigating Chronicles
+## Investigating Chronicles chapter 2 has 6 questions on exam
  
 1. Introduction to Investigating Chronicles 
 2. Receiving a Clarity Query Request
@@ -75,7 +99,9 @@ The following diagram shows how data in Epic moves from Chronicles, to Clarity, 
 
 
 
-## Introduction to Investigating Chroncles 
+## Introduction to Investigating Chroncles chapter 2
+
+### This chapter has 6 questions on the test
  
 
 The structure of the Clarity database is largely determined by the structure of **Chronicles**, where the data
@@ -154,10 +180,15 @@ find the data. One tool that a user can use in Hyperspace to find the **INI** an
 **Item Information window**. The Item Information window is used when you are in the workflow and can
 edit the field where the data is entered as an end user.
 
+### Item Information Window
+When you **control left click** on a data entry field in Hyperspace, the Item Information window appears.
+This window provides the INI and item number in which this data is stored, a Clarity table and column,
+and the items help text.
+
 
 ##  Limitations of Ctrl + Click
 
-The **Ctrl + Click** method typically works on readwrite fields in Hyperspace. Although this method is the
+The Ctrl + Click method typically works on readwrite fields in Hyperspace. Although this method is the
 most convenient way to find a piece of data, it does not work for all data points. If a field is read only, Ctrl
 + Click will often not work, and even some editable fields will not open the Item Information window
 when the control click workflow is completed.
@@ -169,7 +200,7 @@ less likely that the Item Information window will work.
 
 ##  Record Viewer
 
-The **Record Viewer** is an activity in Hyperspace that provides a **read only view** of raw data within a
+The **Record Viewer** is an activity in Hyperspace that provides a read only view of raw data within a
 Chronicles record. It shows all items set on a particular contact of a particular record. To view data, you
 must specify the Master File, Record, and Contact for the data you want to see.
 
@@ -179,9 +210,9 @@ INI + Item number for a piece of data.
 
 ### Finding an item in the Record Viewer
 
-When you know specific record or contact identifying information, you can use the **Record Viewer** to view
-the values stored. Identifying information includes the record ID  1 , an external ID, or a contact serial
-number (CSN). Use the Record Viewer to see what is stored for that contact or to see related data within
+When you know specific record or contact identifying information, you can use the Record Viewer to view
+the values stored. Identifying information includes the record ID ..1., an external ID, or a contact serial
+number .CSN.. Use the Record Viewer to see what is stored for that contact or to see related data within
 the master file and how it fits together.
 
 You want to investigate the filter on the report that asks for only Inpatient or Emergency visits. The report
@@ -250,7 +281,7 @@ category list.
  
 
 
-##  Excercise 2 1 Hospital Admissions Query Research   Chronicles
+##  Excercise 2 1  Hospital Admissions Query Research   Chronicles
  
 Your organization wants to reduce the number of hospital admissions to reduce costs and
 improve patient care. You have been tasked with finding all patients on the Wellness registry
@@ -283,7 +314,7 @@ Some encounters may not have an attending provider documented
 
 
 
-## Excercise 2 2 Chronicles Item Characteristics
+## Excercise 2 2  Chronicles Item Characteristics
 
 Answer the following questions about Chronicles items.
 
@@ -350,11 +381,11 @@ the INI and item number, but she knows the patient is on the Lung Cancer Screeni
 tool would you use to find the INI and item number given this information?
 
 3. In Clarity, which of the following columns COULD contain a NULL value?
- A foreign key column that would store the patients primary care provider
- A date column that would store the discharge date for an encounter
- A string column that stores a patients email address
- A numeric column that stores the patients age in years
- A column that is the primary key of a table
+    1. A foreign key column that would store the patients primary care provider
+    2. A date column that would store the discharge date for an encounter
+    3. A string column that stores a patients email address
+    4. A numeric column that stores the patients age in years
+    5. A column that is the primary key of a table
 
 
 
@@ -446,197 +477,38 @@ maximum length the column can hold.
 
 ## Mapping Chronicles Relationships in Clarity
 
- Introduction to Mapping Chronicles Relationships in Clarity
- Granularity in Clarity
- Why doesnt one Chronicles master file translate into one Clarity table?
- Table Granularity
- Key Item Characteristics
- Identifiers
- Identifying Chronicles Records
- Identifying Chronicles Contacts
- Identifying Lines
- Exercise 4 1  The Clarity Data Model for EPT
- The Clarity Data Model
- Clarity Data Model Chart
- Key Principles
- Linking Between Tables
- Linking Diagrams
- Exercise 4 2  Using the Linking Diagram
- In Class Demo  Cardinality
- Begin Research in Chronicles
- Exercise 4 3  Hospital Admissions Query 
- Fields
- Linking Diagram
- If You Have Time   Exercise 4 4 Misleading Results
- Using Networked Items to Inform Joins
- Chronicles Research
- Identifying Clarity Tables and Columns
- Mapping Chronicles Relationships in Clarity 4   1
- Join Tables Together Using Correct Foreign Keys
- Exercise 4 5 Finishing the Hospital Admissions Query
- If You Have Time   Exercise 4 6  Hospital Charges Query
- Reviewing the Chapter
+1. Introduction to Mapping Chronicles Relationships in Clarity
+2. Granularity in Clarity
+3. Why doesnt one Chronicles master file translate into one Clarity table?
+4. Table Granularity
+5. Key Item Characteristics
+6. Identifiers
+7. Identifying Chronicles Records
+8. Identifying Chronicles Contacts
+9. Identifying Lines
+10. Exercise 4 1  The Clarity Data Model for EPT
+11. The Clarity Data Model
+12. Clarity Data Model Chart
+13. Key Principles
+14. Linking Between Tables
+15. Linking Diagrams
+16. Exercise 4 2  Using the Linking Diagram
+17. In Class Demo Cardinality
+18. Begin Research in Chronicles
+19. Exercise 4 3  Hospital Admissions Query 
+20. Fields
+21. Linking Diagram
+22. If You Have Time   Exercise 4 4 Misleading Results
+23. Using Networked Items to Inform Joins
+24. Chronicles Research
+25. Identifying Clarity Tables and Columns
+26. Mapping Chronicles Relationships in Clarity 4   1
+27. Join Tables Together Using Correct Foreign Keys
+28. Exercise 4 5  Finishing the Hospital Admissions Query
+29. If You Have Time   Exercise 4 6 Hospital Charges Query
+30. Reviewing the Chapter
 
  
-
-
-
-## Sample Clarity SQL 
-
-****** Script for SelectTopNRows command from SSMS  ******
-SELECT TOP (1000) [CLAIM_ID]
-      ,[GROUP_LINE]
-      ,[VALUE_LINE]
-      ,[CM_PHY_OWNER_ID]
-      ,[CM_LOG_OWNER_ID]
-      ,[MULT_PX_DISCOUNT_FLAG]
-  FROM [Clarity_Aug].[dbo].[AP_CLAIM_IF_MULT_PX_DSCNT]
-
-select * from ZC_COUNTRY
-select * from ZC_sex
-select * from ZC_VETERAN_STAT
-select top 10 * from ZC_VETERAN_STAT
-select top 10 * from ZC_DIAG_TYPE
-select top 10 * from ZC_PROC_CATEGORY
-
-select top 10 * from ZC_ICD_10_LATERALITY
-
-select top 100 * from ZC_MEDICATION_ID
-
-with patient_population as 
-(
-select top 10  PAT_ID, pat_name from Patient
-where PAT_NAME  LIKE %LAST,ALEJANDRO%
-) 
-SELECT * FROM patient_population
-
-select top 100 * from PAT_ENC_HSP 
- 
-select top 100 REGISTRY_ID, *  from PAT_ACTIVE_REG
-
-select top 100 prov_id, * from HSP_ATND_PROV
-
- 
-
-
-
-## Sample Clarity SQL 
-
-select * from ZC_VETERAN_STAT
-select top 10 * from ZC_VETERAN_STAT
-select top 10 * from ZC_DIAG_TYPE
-select top 10 * from ZC_PROC_CATEGORY
-select top 100 * from ZC_ENC_TYPE
-
-select top 10 * from ZC_ICD_10_LATERALITY
-
-select top 100 * from ZC_MEDICATION_ID
-
-with patient_population as 
-(
-select top 10  PAT_ID, pat_name from Patient
-where PAT_NAME  LIKE %LAST,ALEJANDRO%
-) 
-SELECT * FROM patient_population
-
-
-select top 100 PAT_ID, PAT_ENC_CSN_ID, ENC_TYPE_C, *  
-from PAT_ENC 
-      OUTER JOIN ZC_ENC_TYPE on PAT_ENC.ENC_TYPE_C = ZC_ENC_TYPE.ENC_TYPE_C
-
-
-SELECT TOP 100 
-    PAT_ENC.PAT_ID, 
-    PAT_ENC.PAT_ENC_CSN_ID, 
-    PAT_ENC.ENC_TYPE_C, 
-    PATIENT.PAT_NAME
-FROM PAT_ENC
-	INNER JOIN PATIENT
-	ON PAT_ENC.PAT_ID = PATIENT.PAT_ID
-
-LEFT OUTER JOIN ZC_ENC_TYPE 
-    ON PAT_ENC.ENC_TYPE_C = ZC_ENC_TYPE.ENC_TYPE_C;
-
-
-select top 100 * from PAT_ENC_HSP 
-
-select top 100 PAT_ID, PAT_NAME, * from PATIENT 
- 
-select top 100 REGISTRY_ID, *  from PAT_ACTIVE_REG
-
-select top 100 prov_id, * from HSP_ATND_PROV
-
-
-
-
- 
-
-
-
-## Sample Clarity SQL 
-
-select * from ZC_VETERAN_STAT
-select top 10 * from ZC_VETERAN_STAT
-select top 10 * from ZC_DIAG_TYPE
-select top 10 * from ZC_PROC_CATEGORY
-select top 100 * from ZC_ENC_TYPE
-
-select top 10 * from ZC_ICD_10_LATERALITY
-
-select top 100 * from ZC_MEDICATION_ID
-
-with patient_population as 
-(
-select top 10  PAT_ID, pat_name from Patient
-where PAT_NAME  LIKE %LAST,ALEJANDRO%
-) 
-SELECT * FROM patient_population
-
-
-select top 100 PAT_ID, PAT_ENC_CSN_ID, ENC_TYPE_C, *  
-from PAT_ENC 
-      OUTER JOIN ZC_ENC_TYPE on PAT_ENC.ENC_TYPE_C = ZC_ENC_TYPE.ENC_TYPE_C
-
-
-SELECT TOP 100 
-    PAT_ENC.PAT_ID, 
-    PAT_ENC.PAT_ENC_CSN_ID, 
-    PAT_ENC.ENC_TYPE_C, 
-    PATIENT.PAT_NAME
-FROM PAT_ENC
-	INNER JOIN PATIENT
-	ON PAT_ENC.PAT_ID = PATIENT.PAT_ID
-
-LEFT OUTER JOIN ZC_ENC_TYPE 
-    ON PAT_ENC.ENC_TYPE_C = ZC_ENC_TYPE.ENC_TYPE_C;
-
-
-select top 100 * from PAT_ENC_HSP 
-
-select top 100 PAT_ID, PAT_NAME, * from PATIENT 
- 
-select top 100 REGISTRY_ID, *  from PAT_ACTIVE_REG
-
-select top 100 prov_id, * from HSP_ATND_PROV
-
-
-
-
- 
-
-
-# URL to EPIC Training httpsuserweb.epic.com
-
-# Epic Training URL httpstraining.epic.com
-
-# Epic Access  tools  httpsaccess.epic.com
- 
-
-Oracle SQL reference link httpsdocs.oracle.comdatabase121SQLRFtoc.htm
-In addition to the Epicprovided training materials and the email address listed at the beginning of this training companion, remember that SQL is an industrystandard language. Here are some nonEpic vendorspecific resources
-
- Microsofts TransactSQL Reference (Database Engine) documentation
- Oracles Database SQL Language Reference website  httpsdocs.oracle.comdatabase121SQLRFtoc.htm
 
 
 ![Solution](code.png)
@@ -644,4 +516,47 @@ In addition to the Epicprovided training materials and the email address listed 
     
 ![Solution](code.png)
 
+    
+## Getting Started
+
+The goal of this solution is to **Jump Start** your development and have you up and running in 30 minutes. 
+
+To get started with the **Epic Clarity** solution repository, follow these steps:
+1. Clone the repository to your local machine.
+2. Install the required dependencies listed at the top of the notebook.
+3. Explore the example code provided in the repository and experiment.
+4. Run the notebook and make it your own - **EASY !**
+    
+## Solution Features
+
+- Easy to understand and use  
+- Easily Configurable 
+- Quickly start your project with pre-built templates
+- Its Fast and Automated
+- Saves You Time 
+
+
+## Code Features
+
+These features are designed to provide everything you need for **Epic Clarity** 
+
+- **Self Documenting** - Automatically identifes major steps in notebook 
+- **Self Testing** - Unit Testing for each function
+- **Easily Configurable** - Easily modify with **config.INI** - keyname value pairs
+- **Includes Talking Code** - The code explains itself 
+- **Self Logging** - Enhanced python standard logging   
+- **Self Debugging** - Enhanced python standard debugging
+- **Low Code** - or - No Code  - Most solutions are under 50 lines of code
+- **Educational** - Includes educational dialogue and background material
+
+    
+## List of Figures
+ ![additional_image](big_picture.png)  <br>![additional_image](category_lookup.png)  <br>![additional_image](category_lookup_II.png)  <br>![additional_image](CDR.png)  <br>![additional_image](contact_serial_number.png)  <br>![additional_image](CSN.png)  <br>![additional_image](data_lineage.png)  <br>![additional_image](EPIC_Clarity.png)  <br>![additional_image](excercise_3_1.png)  <br>![additional_image](item_characteristics.png)  <br>![additional_image](item_characteristics_II.png)  <br>![additional_image](item_information.png)  <br>![additional_image](item_information_window.png)  <br>![additional_image](lesson_2_review.png)  <br>![additional_image](query_request.png)  <br>![additional_image](the_big_picture.png)  <br>
+    
+
+## Github https://github.com/JoeEberle/ - Email  josepheberle@outlook.com 
+    
+![Developer](developer.png)
+
+![Brand](brand.png)
     

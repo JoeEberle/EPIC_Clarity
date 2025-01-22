@@ -11,40 +11,6 @@
 7. Data Lineage
 
 
-
-## Prerequisites and Expectations
-
-Before undertaking the course of study within this class, you must have completed the following tasks
-1. Attend **COG170 Cogito Fundamentals**
-2. Complete the RPT101i SQL I self study
-3. Complete the SQL I Self Assessment
-4. Attend CDW110v Caboodle Data Model Fundamentals
-
-
-
-## How to Use This Training Companion
-
-This training companion is for use in conjunction with other course materials.
-
-Note that new training materials are released regularly throughout the year. If you downloaded this
-companion even a few weeks or months ago, there may be a new version that you should use instead. At
-the beginning of this companion, look at the version and dates listed. If you  complete a task after its
-listed date, be sure to check the All Training Companion Change Log to see if there are significant
-changes to the new materials.
-
-If there are, be sure to download the new materials when theyre released.
-Youll find informative text boxes and do now steps throughout the lessons to draw your attention to
-specific content. There are a few different types of text boxes you might encounter. Each has a different
-purpose as defined below
-
-
-## After Class Practice
-
-After class, you will likely want to practice in the system and complete additional in class or if you have time
-exercises. Please reference the following documents available on Galaxy for information on how to log in and use our 
-practice system.
-
-
 ## Data Lineage 
 
 Data in Epic moves from Chronicles, to Clarity, to Caboodle.
@@ -279,12 +245,12 @@ Whitecoat as one of her attending providers.
 
 
 ### Additional Context
- **Patient ID (internal)** This field stores the internal ID of the patient record, which is not the patients MRN.
- **Patient Name** This field stores the name of the patient, which is the same as the name of the record in EPT.
- **Patient Registries** This field references the entire list of registries the patient is included in. Aubrey is on the Active Patients Registry as well as the Wellness Registry Female 30 49.
- **Patient Class** This field categorizes the type of visit into categories such as inpatient, outpatient, or emergency. Aubreys hospital encounter was an inpatient encounter.
- **Hospital Admission Date** This field stores the date the patient was first admitted to the facility, bedded in the ED, or confirmed for an HOV. There are many dates and times on a patient contact. Be sure to read the
- **Attending Providers** Walt Whitecoat was one of Aubreys attending providers.
+1. **Patient ID (internal)** This field stores the internal ID of the patient record, which is not the patients MRN.
+2. **Patient Name** This field stores the name of the patient, which is the same as the name of the record in EPT.
+3. **Patient Registries** This field references the entire list of registries the patient is included in. Aubrey is on the Active Patients Registry as well as the Wellness Registry Female 30 49.
+4. **Patient Class** This field categorizes the type of visit into categories such as inpatient, outpatient, or emergency. Aubreys hospital encounter was an inpatient encounter.
+5. **Hospital Admission Date** This field stores the date the patient was first admitted to the facility, bedded in the ED, or confirmed for an HOV. There are many dates and times on a patient contact. Be sure to read the
+6. **Attending Providers** Walt Whitecoat was one of Aubreys attending providers.
 
 Some encounters may not have an attending provider documented
 
@@ -296,21 +262,29 @@ Answer the following questions about Chronicles items.
 
 1. A Chronicles item can store one or more options from a limited list. Which of the following could
 account for this behavior? (Choose all that apply)
- Single Response
- Multiple Response
- Networked
- Overtime
- No Add
- Category
+    1. Single Response
+    2. **Multiple Response**
+    3. **Networked**
+    4. Overtime
+    5. No Add
+    6. **Category**
+
+The correct Answer is B, C and F. If a Chronicles item can store one or more values, it is a multiple response item. If the
+options come from a limited list, that item may be a category item, where the category list is the list
+of options, or networked, where the records or contacts in the destination master file is the list of
+options
 
 2. A Chronicles item stores a single value but can store a separate value for each contact on a record.
 Which of the following could account for this behavior? (Choose all that apply)
- Single Response
- Multiple Response
- Networked
- Overtime
- No Add
- Category
+    1. **Single Response**
+    2. Multiple Response
+    3. Networked
+    4. **Overtime**
+    5. No Add
+    6. Category
+
+The correct answer is A and D. If a Chronicles item can store only **one value**, it is a **single response item**. If a separate
+value is stored on **each contact** the add type is **Overtime**    
 
 
 ## Reference Chronicles Item Characteristics
@@ -323,16 +297,53 @@ companion.
 ### Add Type and Response Type
 #### Add Type
 
-An items add type describes how long a piece of data is valid. It determines whether an items value is
-stored on each contact, or directly to the record.
+An items **add type** describes how long a piece of data is valid. It determines whether an items value is
+stored on **each contact**, or **directly to the record**.
 
 When looking at a patients chart, a clinician will want to know not just the patients current weight, but
-how their weight has varied over time. This type of information should be stored on a contact. On the
+how their weight has varied **over time**. This type of information should be stored on a contact. On the
 other hand, if a registrar needs to change a patients date of birth, it probably doesnt mean the patients
-date of birth has actually changed. Instead, it probably means the value originally entered was incorrect.
-This type of information should be stored on a record.
+date of birth has actually changed. Instead, it probably means the value originally entered was **incorrect**.
+This type of information should be **stored on a record**.
 
 These different types of data storage needs are reflected in the different add types.
+
+1. The **No Add** add type means items store data directly on a record, not a specific contact. The
+value of a no add item should be considered true for all contacts on that record. For example, a patients 
+**date of birth** is a **no add item**, and you can assume that no matter how many contacts the patient has, 
+their date of birth is the same. If a **no add item is changed**, the old value is **replaced**.
+
+2. The **response each time** add type stores values separately on each of a **records contacts**. If a
+response each time item is blank for a certain contact, it should be considered unknown. For example,
+if a patients **blood pressure** is not collected during a certain visit to the doctor, you cannot 
+assume that it has not changed since the last time the patients blood pressure was taken.
+
+3. The **Lookback** Lookback items store values separately on each contact but assume that
+the last value entered remains true until a new value is entered. For example, the system automatically
+enters a patients age on each contact, but only if their age is different from the last time the patient was
+seen.
+
+
+
+## Response Type
+
+An items **response type** determines how many lines of data an item can hold. For example, at any one
+time, a patient has only **one date of birth**, but can have **multiple symptoms**, or a **multi line address**.
+
+1. A **Single Response** Only **one line** of data can be stored **per contact**.
+
+2. A **Multiple Response** response type **Multiple lines** of data can be **stored per contact**. These lines
+might be discrete pieces of data, such as **multiple symptoms**, or they might be **multiple lines of 
+a block of text**, such as an **address**.
+
+3. A **Related Group** response type means Multiple lines of data can be stored per contact, and each one of these
+lines is related to a line in another item. These lines might refer to a list of relatives names and their phone
+numbers.
+
+Since both **multiple response** and **related group** items store more than one type of data, these response types
+may collectively be referred to as **multiple response types**.
+
+Single response items store one line of data, while multiple response items can store multiple lines of data.
 
 
 
@@ -352,9 +363,13 @@ time, a patient has only one date of birth, but can have multiple symptoms, or a
 input various information. What method would you use to find the INI + Item numbers of the data
 hes looking for?
 
+Answer 1 is ctrl  click
+
 2. A clinical administrator requests a query to include data for a patients registries. Shes not sure of
 the INI and item number, but she knows the patient is on the Lung Cancer Screening registry. What
 tool would you use to find the INI and item number given this information?
+
+Answer 2 is record viewer 
 
 3. In Clarity, which of the following columns COULD contain a NULL value?
     1. A foreign key column that would store the patients primary care provider
@@ -363,34 +378,37 @@ tool would you use to find the INI and item number given this information?
     4. A numeric column that stores the patients age in years
     5. A column that is the primary key of a table
 
+Answer three is A, B, C, D because only the primary key cannot contain nulls. All but E. In Clarity the 
+only column that CANNOT be NULL is a column in the primary key of a table.     
+
 
 
 ## Chapter 3  Investigating Clarity  CLR110 Clarity Data Model Fundamentals
- Big Picture
- Conducting Clarity Research
- Data Dictionary
-      Search the Cogito Dictionary
-      Overview Section
-      Columns Section
-      Data Types
-      Category List Tables
-      Chronicles Info
-      Dependencies
-      Indexes
- Beyond the Basics Cogito Documentation
- Exercise 3 1 Hospital Admissions Query Research   Clarity
- The ETL Process
-      Tools Used in the Clarity ETL Process
-      Load Frequencies
-      Changes to Existing Tables and Columns
-           Deprecation
-           Identifying Changes between Versions
-      Extracted to Clarity
-           Core Tables
- In Class Exercises
-      Exercise 3 2 Query PAT_ENC
-      After Class Exercise 3 3 Further Exploring the Cogito Dictionary
- Reviewing Chapter 3 
+1. Big Picture
+2. Conducting Clarity Research
+3. Data Dictionary
+4.     Search the Cogito Dictionary
+5.      Overview Section
+6.     Columns Section
+7.      Data Types
+8.      Category List Tables
+9.     Chronicles Info
+10.     Dependencies
+11.     Indexes
+12. Beyond the Basics  Cogito Documentation
+13. Exercise 3 1  Hospital Admissions Query Research Clarity
+14. The ETL Process
+15.     Tools Used in the Clarity ETL Process
+16.     Load Frequencies
+17.     Changes to Existing Tables and Columns
+18.          Deprecation
+19.          Identifying Changes between Versions
+20.     Extracted to Clarity
+21.         Core Tables
+22. In Class Exercises
+23.     Exercise 3 2  Query PAT_ENC
+24.     After Class Exercise 3 3  Further Exploring the Cogito Dictionary
+25. Reviewing Chapter 3 
 
 
 
@@ -433,21 +451,31 @@ table.
 
 ## Data Types
  
-The data types used by Chronicles are String, Number, Date, Time, Instant, and Category. However, when
-the ETL process transforms this data into a relational format, it also converts the data into standard
-datatypes used by relational databases (the ANSI standard). Depending on the columns datatype, there
-may be a secondary characteristic defined as well. For example, for a VARCHAR, you can define the
+The data types used by Chronicles are
+1. String
+2. Number
+3. Date
+4. Time 
+5. Instant 
+6. and Category. 
+
+However, when the ETL process transforms this data into a **relational format**, it also converts the data into 
+**standard datatypes** used by **relational databases** (the ANSI standard). Depending on the columns 
+datatype, there may be a secondary characteristic defined as well. For example, for a VARCHAR, you can define the
 maximum length the column can hold.
 
 
 
 ## Category List Tables
  
-The data types used by Chronicles are String, Number, Date, Time, Instant, and Category. However, when
-the ETL process transforms this data into a relational format, it also converts the data into standard
-datatypes used by relational databases (the ANSI standard). Depending on the columns datatype, there
-may be a secondary characteristic defined as well. For example, for a VARCHAR, you can define the
-maximum length the column can hold.
+Items in Chronicles with the data type category store the **category value**. The **category value will be
+extracted to Clarity**. One example of this is the column PATIENT.STATE_C. In the training database,
+Wisconsin is stored as the category value of 50 instead of **Wisconsin.**
+
+To determine the name that pairs to the category value, you will need to use a category list table in
+Clarity, often called a **ZC_ table**. Every category column will list the appropriate **ZC_ table** in the Category
+Lookup column. To determine what column you should join on, open the category list table and identify
+the primary key.
 
 
 
